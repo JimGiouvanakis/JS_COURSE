@@ -138,6 +138,206 @@ John weights 85 kg and is 1.76 m tall .
 // multiple \n\
 // lines`);
 
-const age = 19;
+// const age = 19;
 
-const isOldEnough = age >= 18;
+// const isOldEnough = age >= 18;
+
+// if (isOldEnough) {
+//   console.log("Sara can start driving license");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`Sara is too young, wait another ${yearsLeft} years`);
+// }
+
+// const birthYear = 1999;
+// let century;
+// IF(birthYear <= 2000) {
+//   century = 20 ;
+
+// } else {
+//    century = 21;
+// }
+// console.log(century);
+
+//////////////////////////////////////////////
+/////////// Coding Challenge #2 //////////////
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote , and imporve it:
+1.Print a nice output to the console , saying who has the higher BMI.The message can be either "Mark's BMI
+is higher than John's!" or "John's BMI is higher than Mark's!"
+2.Use a template string to include the BMI values is the outputs.Example :"Mark's BMI (28.3) is higher than John's (23.9)!"
+
+Hint:Use an if/else statement
+
+Good Luck
+*/
+
+// let MarkBMI = 78 / 1.69 ** 2;
+// let JohnBMI = 92 / 1.95 ** 2;
+// let HightBMI = MarkBMI > JohnBMI;
+
+// if (MarkBMI > JohnBMI) {
+//   console.log(`Mark's BMI is higher than John's!`);
+// } else {
+//   console.log(`John's BMI is higher than Mark's!`);
+// }
+
+// MarkBMI = 95 / (1.88 * 1.88);
+// JohnBMI = 85 / (1.76 * 1.76);
+// HightBMI = MarkBMI > JohnBMI;
+
+// if (MarkBMI > JohnBMI) {
+//   console.log(`Mark's BMI (${MarkBMI}) is higher than John's (${JohnBMI})!`);
+// } else {
+//   console.log(`John's's BMI (${JohnBMI}) is higher than Mark's (${MarkBMI})!`);
+// }
+
+// const inputYear = "1991";
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number("Jonas"));
+// console.log(typeof NaN);
+
+// console.log(String(23), 23);
+// console.log("I am " + 23 + "yearsl old");
+// console.log("23" - "10" - 3);
+
+// let n = "1" + 1; // '11'
+// n = n - 1;
+// console.log(n); // '10'
+
+// // 5 falsy values:0 , ' ',undefined ,null , NaN
+
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Jonas"));
+// console.log(Boolean({}));
+// console.log(Boolean(""));
+
+// const money = 0; // false because is falsy value the 0 if i put any number it will me true
+// if (money) {
+//   console.log("Dont spend it all ;");
+// } else {
+//   console.log("You should get a job");
+// }
+
+// let height; // is will appear falce bacause the undefined is a falsy value
+// if (heigh) {
+//   console.log("YAY! Height is defined");
+// } else {
+//   console.log("Height is undefined");
+// }
+
+// const age = 18;
+
+// if (age === 18) console.log("You just became an adult :D (scrict)"); // it have to me exactly the same
+
+// if (age == "18") console.log("You just became an adult :D (loose)"); // this is true because it  doeasnt matter the type
+
+// const favourite = prompt("Whats your favourite number?");
+
+// console.log(favourite);
+// console.log(typeof favourite);
+
+// if (favourite === 23) {
+//   console.log("Cool! 23 is an amazing number!");
+// } else if (favourite === 7) {
+//   console.log("7 is also a cool number");
+// } else {
+//   console.log("number is not 23 or 7");
+// }
+
+// if (favourite !== 23) console.log("Why not 23?");
+
+// const hasDriversLicense = true; //A
+// const hasGoodVision = false; // B
+
+// console.log(hasDriversLicense && hasGoodVision); // AND
+// console.log(hasDriversLicense || hasGoodVision); // OR
+// console.log(!hasDriversLicense); // the opposite
+
+// const itTired = true;
+// console.log(hasDriversLicense && hasGoodVision && itTired);
+
+// if (hasDriversLicense && hasGoodVision && !itTired) {
+//   console.log("Sarah can drive");
+// } else {
+//   console.log("Sarah is not able to drive");
+// }
+
+////////////////////////////////////
+// Coding Challenge #3
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. 
+The winner with the highest average score wins the a trophy!
+
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console.
+ Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher 
+score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to
+ test for minimum score, as well as multiple else-if blocks 😉
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when
+ both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+GOOD LUCK 😀
+*/
+
+// let Dolphins = (97 + 112 + 101) / 3;
+// let Koalas = (88 + 91 + 110) / 3;
+// let pointsD = 97 + 112 + 101;
+// let pointsK = 88 + 91 + 110;
+// let winner;
+// if (Dolphins > Koalas) {
+//   winner = "Dolphins";
+// } else if (Dolphins < Koalas) {
+//   winner = "Koalas";
+// } else {
+//   winner = "Is a draw!";
+// }
+
+// console.log(
+//   `The Winner is ${winner}!! and points is ${pointsK} for the Koalas and ${pointsD} for the Dolphins`
+// );
+
+// Dolphins = (97 + 112 + 101) / 3;
+// Koalas = (109 + 95 + 123) / 3;
+
+// if (Dolphins > Koalas && Dolphins >= 100) {
+//   winner = "Dolphins";
+// } else if (Dolphins < Koalas && Koalas >= 100) {
+//   winner = "Koalas";
+// } else {
+//   winner = "Is a draw!";
+// }
+
+// console.log(`The Winner is : ${winner}!!`);
+
+// Dolphins = (97 + 112 + 101) / 3;
+// Koalas = (109 + 95 + 106) / 3;
+
+// if (Dolphins > Koalas && Dolphins >= 100) {
+//   winner = "Dolphins";
+// } else if (Dolphins < Koalas && Koalas >= 100) {
+//   winner = "Koalas";
+// } else if (Dolphins === Koalas && Koalas >= 100 && Dolphins >= 100) {
+//   winner = "Is a draw!";
+// } else {
+//   winner = "Nobody Win , Score too low ";
+// }
+
+// console.log(`The Winner is : ${winner}!!`);
+
+const day = "monday";
+
+switch (day) {
+  case "monday":
+}
