@@ -234,17 +234,108 @@ GOOD LUCK 😀
 //   }
 // };
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+// // const calcTip = (bill) =>
+// //   bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+// const bills = [125, 555, 44];
+
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+// console.log(bills, tips, total);
+
+// const jimArray = [
+//   "Jim",
+//   "Giouvanakis",
+//   "Developer",
+//   ["Michael", "Peter", "Steven"],
+// ];
+
+// const jim = {
+//   firstname: "Jim",
+//   lastname: "Giouvanakis",
+//   age: 2037 - 1999,
+//   job: "Developer",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+
+// console.log(jim);
+
+// console.log(jim.lastname);
+
+// console.log(jim["lastname"]);
+
+// const namekey = "name";
+// console.log(jim["first" + namekey]);
+// console.log(jim["last" + namekey]);
+
+// const quesition = prompt("A questions ?");
+
+// if (jim[quesition]) {
+//   console.log(jim[quesition]);
+// } else {
+//   console.log("wrong");
+// }
+
+// jim.location = "Portugal";
+// jim["twitter"] = "@giouvanakis";
+// console.log(jim);
+
+// // Challenge
+// // "Jim has 3 friends and his best friend is called Michael"
+
+// const chall =
+//   jim.firstname +
+//   " has" +
+//   " " +
+//   jim.friends.length +
+//   " friend and his best friend is " +
+//   jim.friends[0];
+// console.log(chall);
+
+const jim = {
+  firstname: "Jim",
+  lastname: "Giouvanakis",
+  age: 1999,
+  job: "Developer",
+  friends: ["Michael", "Peter", "Steven"],
+  driverlicense: false,
+
+  calcAge: function () {
+    // console.log(this);
+    this.age = 2024 - this.age;
+    return this.age;
+  },
+
+  viewdata: function () {
+    let license;
+    if (this.driverlicense) {
+      license = "a";
+    } else {
+      license = "no";
+    }
+    const chall = `${this.firstname} is a ${this.calcAge()} ${
+      this.job
+    } and he has ${license} drivers license`;
+
+    return chall;
+  },
 };
 
-// const calcTip = (bill) =>
-//   bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// console.log(jim.calcAge());
 
-const bills = [125, 555, 44];
+// console.log(jim.age);
+// console.log(jim.age);
+// console.log(jim.age);
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(jim["calcAge"](jim.age));
 
-const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+// Challenge
+//Jim is a 25 years old and he has a driver's license
 
-console.log(bills, tips, total);
+console.log(jim.viewdata());
