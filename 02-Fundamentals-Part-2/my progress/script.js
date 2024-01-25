@@ -298,34 +298,34 @@ GOOD LUCK 😀
 //   jim.friends[0];
 // console.log(chall);
 
-const jim = {
-  firstname: "Jim",
-  lastname: "Giouvanakis",
-  age: 1999,
-  job: "Developer",
-  friends: ["Michael", "Peter", "Steven"],
-  driverlicense: false,
+// const jim = {
+//   firstname: "Jim",
+//   lastname: "Giouvanakis",
+//   age: 1999,
+//   job: "Developer",
+//   friends: ["Michael", "Peter", "Steven"],
+//   driverlicense: false,
 
-  calcAge: function () {
-    // console.log(this);
-    this.age = 2024 - this.age;
-    return this.age;
-  },
+//   calcAge: function () {
+//     // console.log(this);
+//     this.age = 2024 - this.age;
+//     return this.age;
+//   },
 
-  viewdata: function () {
-    let license;
-    if (this.driverlicense) {
-      license = "a";
-    } else {
-      license = "no";
-    }
-    const chall = `${this.firstname} is a ${this.calcAge()} ${
-      this.job
-    } and he has ${license} drivers license`;
+//   viewdata: function () {
+//     let license;
+//     if (this.driverlicense) {
+//       license = "a";
+//     } else {
+//       license = "no";
+//     }
+//     const chall = `${this.firstname} is a ${this.calcAge()} ${
+//       this.job
+//     } and he has ${license} drivers license`;
 
-    return chall;
-  },
-};
+//     return chall;
+//   },
+// };
 
 // console.log(jim.calcAge());
 
@@ -338,4 +338,45 @@ const jim = {
 // Challenge
 //Jim is a 25 years old and he has a driver's license
 
-console.log(jim.viewdata());
+// console.log(jim.viewdata());
+
+const Mark = {
+  fullname: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+};
+
+const john = {
+  fullname: "John Smith",
+  mass: 92,
+  height: 1.92,
+};
+
+function CalcMass(mass, height) {
+  var calc = mass / (height * height);
+  return calc;
+}
+
+const CalcMark = CalcMass(Mark.mass, Mark.height);
+
+const CalcJohn = CalcMass(john.mass, john.height);
+
+// const chall = `${Mark.fullname}'s BMI (${CalcMass(
+//   Mark.mass,
+//   Mark.height
+// )}) is higher than ${Mark.fullname}'s (${CalcMass(john.mass, john.height)}) `;
+let chall;
+
+if (CalcMark > CalcJohn) {
+  chall = `${Mark.fullname}'s BMI (${CalcMass(
+    Mark.mass,
+    Mark.height
+  )}) is higher than ${john.fullname}'s (${CalcMass(john.mass, john.height)}) `;
+} else {
+  chall = `${john.fullname}'s BMI (${CalcMass(
+    john.mass,
+    john.height
+  )}) is higher than ${Mark.fullname}'s (${CalcMass(Mark.mass, Mark.height)}) `;
+}
+
+console.log(chall);
