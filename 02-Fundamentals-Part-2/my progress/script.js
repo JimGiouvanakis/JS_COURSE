@@ -340,43 +340,137 @@ GOOD LUCK 😀
 
 // console.log(jim.viewdata());
 
-const Mark = {
-  fullname: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-};
+// const Mark = {
+//   fullname: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+// };
 
-const john = {
-  fullname: "John Smith",
-  mass: 92,
-  height: 1.92,
-};
+// const john = {
+//   fullname: "John Smith",
+//   mass: 92,
+//   height: 1.92,
+// };
 
-function CalcMass(mass, height) {
-  var calc = mass / (height * height);
-  return calc;
-}
+// function CalcMass(mass, height) {
+//   var calc = mass / (height * height);
+//   return calc;
+// }
 
-const CalcMark = CalcMass(Mark.mass, Mark.height);
+// const CalcMark = CalcMass(Mark.mass, Mark.height);
 
-const CalcJohn = CalcMass(john.mass, john.height);
+// const CalcJohn = CalcMass(john.mass, john.height);
 
 // const chall = `${Mark.fullname}'s BMI (${CalcMass(
 //   Mark.mass,
 //   Mark.height
 // )}) is higher than ${Mark.fullname}'s (${CalcMass(john.mass, john.height)}) `;
-let chall;
+// let chall;
 
-if (CalcMark > CalcJohn) {
-  chall = `${Mark.fullname}'s BMI (${CalcMass(
-    Mark.mass,
-    Mark.height
-  )}) is higher than ${john.fullname}'s (${CalcMass(john.mass, john.height)}) `;
-} else {
-  chall = `${john.fullname}'s BMI (${CalcMass(
-    john.mass,
-    john.height
-  )}) is higher than ${Mark.fullname}'s (${CalcMass(Mark.mass, Mark.height)}) `;
+// if (CalcMark > CalcJohn) {
+//   chall = `${Mark.fullname}'s BMI (${CalcMass(
+//     Mark.mass,
+//     Mark.height
+//   )}) is higher than ${john.fullname}'s (${CalcMass(john.mass, john.height)}) `;
+// } else {
+//   chall = `${john.fullname}'s BMI (${CalcMass(
+//     john.mass,
+//     john.height
+//   )}) is higher than ${Mark.fullname}'s (${CalcMass(Mark.mass, Mark.height)}) `;
+// }
+
+// console.log(chall);
+
+// console.log("Lifting weights repetition 1");
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`Lifting weights repetition ${i}`);
+// }
+
+// const jimArray = [
+//   "Jim",
+//   "Giouvanakis",
+//   2024 - 1999,
+//   "Developer",
+//   ["Michael", "Peter", "Steven"],
+// ];
+
+// const types = [];
+
+// // console.log(jimArray[1]);
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(jimArray[i]);
+
+//   types[i] = typeof jimArray[i];
+
+//   // console.log(types[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < 5; i++) {
+//   ages.push(2037 - years[i]);
+// }
+
+// console.log(ages);
+
+// for (let i = 0; i < jimArray.length; i++) {
+//   if (typeof jimArray[i] !== "string") continue;
+
+//   console.log(jimArray[i]);
+// }
+
+// for (let i = jimArray.length - 1; i >= 0; i--) {
+//   console.log(i, jimArray[i]);
+// }
+
+// for (let excerise = 1; excerise < 4; excerise++) {
+//   console.log(`----Starting excerise ${excerise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+//   }
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`Lifting weights repetition ${rep}`);
+//   rep++;
+// }
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice == 6) console.log("Loop is about to end ... ");
+// }
+
+// CHALLENGE #4
+
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+const calcTip = function (bills) {
+  if (bills > 50 && bills < 300) {
+    return bills * 0.15;
+  } else {
+    return bills * 0.2;
+  }
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < 10; i++) {
+  totals[i] = calcTip(bills[i]) + bills[i];
+  tips[i] = calcTip(bills[i]);
 }
 
-console.log(chall);
+console.log(totals);
+console.log(tips);
