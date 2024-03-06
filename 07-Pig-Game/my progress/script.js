@@ -11,11 +11,9 @@ let hold = 0;
 
 function ChangePlayer(player) {
   if (player === 0) {
-    console.log(`44444`);
     Player0.classList.remove(`player--active`);
     Player1.classList.add(`player--active`);
   } else if (player === 1) {
-    console.log(`55555`);
     Player1.classList.remove(`player--active`);
     Player0.classList.add(`player--active`);
   }
@@ -107,7 +105,6 @@ function RollDice() {
 }
 
 document.querySelector(`.btn--new`).addEventListener(`click`, function () {
-  console.log(`21313213123213213`);
   ChangeImage(0);
   ClearCurrent(2);
 });
